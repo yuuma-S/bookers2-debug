@@ -15,7 +15,7 @@
       <div class="container">
 
         <nav class="nav navbar-nav navbar-left">
-          <span>Bookers</span>
+          <span>Bookers!!</span>
         </nav>
         <nav>
           <ul class="nav navbar-nav navbar-right">
@@ -38,7 +38,9 @@
     </header>
     <!--ヘッダーの記述-->
     <div class="container">
-      <p id="notice"><%= notice %></p> <!--デバイスでnotice設定されているので呼び出してるだけ-->
+      <%= flash[:notice] %>
+      <%= yield %>
+   <!--デバイスでnotice設定されているので呼び出してるだけ-->
 
     </div>
   </body>
