@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
-
   def show
+    @book_new = Book.new
   	@book = Book.find(params[:id])
     @user = current_user
   end
@@ -36,9 +36,9 @@ class BooksController < ApplicationController
   	end
   end
 
-  def delete
+  def destroy
   	@book = Book.find(params[:id])
-  	@book.destoy
+  	@book.destroy
   	redirect_to books_path, notice: "successfully delete book!"
   end
 
